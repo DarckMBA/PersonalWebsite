@@ -82,3 +82,43 @@ body {
         left: calc(var(--width) * -1);
     }
 }
+
+/* --Section Selector Styling-- */
+.section-selector {
+    border: 2px solid white;
+    border-radius: 30px;
+    width: 360px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    left: 550px;
+    top: 130px;
+
+    /* Glassmorphism */
+    color: #fff;
+    background-color: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.section-selector button {
+    border: 1px solid rgba(255,255,255,0.7);
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+
+    /* Glassmorphism */
+    display: inline-block;
+    background-color: rgba(255,255,255,0.25);
+    backdrop-filter: blur(30px);
+    color: rgba(255,255,255,0.8);
+}
+
+.section-selector button:hover {
+    background-color: rgba(255,255,255,0.35);
+}
