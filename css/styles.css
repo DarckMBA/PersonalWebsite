@@ -1,7 +1,12 @@
+/* -----Fonts----- */
+@import url('alpino.css');
+@import url('neco.css');
+@import url('tabular.css');
+
+/* -----General Styling----- */
 * {
     width: 100%;
     background-color: #2f3e46;
-    /* background-color: #001220;; */
 }
 
 body {
@@ -24,17 +29,17 @@ body {
 }
 
 /* --Waves Styling-- */
-.spacer {
+.waves {
     aspect-ratio: 960/300;
-    width: 100%;
+    width: 100vw;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     z-index: 1;
 }
 
-.waves1 {
-    background-image: url('./layered-waves-haikei.svg');
+.wave1 {
+    background-image: url('../assets/images/layered-waves-haikei.svg');
 }
 
 
@@ -83,8 +88,8 @@ body {
     }
 }
 
-/* --Section Selector Styling-- */
-.section-selector {
+/* --Nav Bar Styling-- */
+.nav-bar {
     border: 2px solid white;
     border-radius: 30px;
     width: 360px;
@@ -93,8 +98,9 @@ body {
     justify-content: center;
     gap: 20px;
     position: absolute;
-    left: 550px;
-    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 28%;
 
     /* Glassmorphism */
     color: #fff;
@@ -103,7 +109,7 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.section-selector button {
+.nav-bar button {
     border: 1px solid rgba(255,255,255,0.7);
     border-radius: 20px;
     width: 100px;
@@ -119,6 +125,51 @@ body {
     color: rgba(255,255,255,0.8);
 }
 
-.section-selector button:hover {
+.nav-bar button:hover {
     background-color: rgba(255,255,255,0.35);
+}
+
+
+/* -----Modal Styling----- */
+.home-modal {
+    border-radius: 20px;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 26%;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* Glassmorphism */
+    color: #fff;
+    background-color: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+}
+
+.home-modal h1 {
+    background: none;
+    margin-left: 2%;
+    font-family: Tabular-Regular;
+    font-size: 28px;
+}
+
+.home-modal p {
+    background: none;
+    margin-left: 4%;
+    width: 94%;
+    font-family: Alpino-Regular;
+    font-size: 20px;
+}
+
+.home-modal .modal-header {
+    border-bottom: 2px solid grey;
+    background-color: #253137;
+}
+
+.home-modal .introduction, .education, .language {
+    background: none;
 }
