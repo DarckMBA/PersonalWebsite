@@ -1,0 +1,84 @@
+* {
+    width: 100%;
+    background-color: #2f3e46;
+    /* background-color: #001220;; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: grey;
+    background-color: white;
+    width: 100%;
+}
+
+
+/* -----Header Styling----- */
+.header {
+    position: relative;
+}
+
+/* --Waves Styling-- */
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.waves1 {
+    background-image: url('./layered-waves-haikei.svg');
+}
+
+
+/* --Background Slider Styling-- */
+.background-slider {
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+}
+
+.background-slider .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: absolute;
+}
+
+.background-slider .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    background: none;
+    animation: autoRun 20s linear infinite;
+    animation-delay: calc((20s / var(--quantity)) * (var(--position) - 1));
+}
+
+.background-slider .list .item p {
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: none;
+}
+
+@keyframes autoRun {
+    from {
+        left: 100%;
+    } to {
+        left: calc(var(--width) * -1);
+    }
+}
