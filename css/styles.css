@@ -14,18 +14,13 @@ body {
     padding: 0;
 }
 
-.body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 20px;
-    color: grey;
-    background-color: white;
-    width: 100%;
-}
-
 
 /* -----Header Styling----- */
 .header {
     position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* --Waves Styling-- */
@@ -35,7 +30,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
+    z-index: 0;
 }
 
 .wave1 {
@@ -44,25 +39,25 @@ body {
 
 
 /* --Background Slider Styling-- */
-.background-slider {
+.language-slider {
     width: 100%;
     height: var(--height);
     overflow: hidden;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
     background: none;
 }
 
-.background-slider .list {
+.language-slider .list {
     display: flex;
     width: 100%;
     min-width: calc(var(--width) * var(--quantity));
     position: absolute;
 }
 
-.background-slider .list .item {
+.language-slider .list .item {
     width: var(--width);
     height: var(--height);
     position: absolute;
@@ -72,7 +67,7 @@ body {
     animation-delay: calc((20s / var(--quantity)) * (var(--position) - 1));
 }
 
-.background-slider .list .item p {
+.language-slider .list .item p {
     width: 100%;
     font-size: 20px;
     font-weight: bold;
@@ -88,6 +83,25 @@ body {
     }
 }
 
+/* --Polygons Styling-- */
+.polygons {
+    aspect-ratio: 900/300;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 14%;
+    left: 4%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.polygon1 {
+    background-image: url('../assets/images/polygon-scatter-haikei.svg');
+}
+
 /* --Nav Bar Styling-- */
 .nav-bar {
     border: 2px solid white;
@@ -100,7 +114,8 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 28%;
+    top: 16%;
+    z-index: 10;
 
     /* Glassmorphism */
     color: #fff;
@@ -130,7 +145,8 @@ body {
 }
 
 
-/* -----Modal Styling----- */
+/* -----Main Styling----- */
+/* --Modal Styling-- */
 .home-modal {
     border-radius: 20px;
     width: 800px;
@@ -143,6 +159,7 @@ body {
     top: 26%;
     overflow: hidden;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 
     /* Glassmorphism */
     color: #fff;
@@ -171,5 +188,25 @@ body {
 }
 
 .home-modal .introduction, .education, .language {
+    background: none;
+}
+
+
+/* -----Footer Styling----- */
+footer {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: none;
+    z-index: 10;
+    
+    font-size: medium;
+    text-align: center;
+}
+
+footer span {
+    font-family: Neco-Regular;
     background: none;
 }
