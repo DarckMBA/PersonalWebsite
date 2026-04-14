@@ -144,10 +144,51 @@ body {
     background-color: rgba(255,255,255,0.35);
 }
 
+.nav-bar button.highlighted {
+    background-color: rgba(255,255,255,0.35);
+}
+
 
 /* -----Main Styling----- */
-/* --Modal Styling-- */
+.modal-header {
+    border-bottom: 2px solid grey;
+    background-color: #253137;
+}
+
+.modals h1 {
+    background: none;
+    margin-left: 2%;
+    font-family: Tabular-Regular;
+    font-size: 28px;
+}
+
+.modals span {
+    background: none;
+}
+
+.modals p {
+    background: none;
+    margin-left: 4%;
+    width: 94%;
+    font-family: Alpino-Regular;
+    font-size: 20px;
+}
+
+.modals ul {
+    background: none;
+}
+
+.modals li {
+    background: none;
+    margin-left: 4%;
+    width: 94%;
+    font-family: Alpino-Regular;
+    font-size: 20px;
+}
+
+/* --Home Modal Styling-- */
 .home-modal {
+    border: 2px solid grey;
     border-radius: 20px;
     width: 800px;
     height: 500px;
@@ -159,36 +200,84 @@ body {
     top: 26%;
     overflow: hidden;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
     z-index: 10;
 
     /* Glassmorphism */
-    color: #fff;
     background-color: rgba(255,255,255,0.06);
     backdrop-filter: blur(10px);
 }
 
-.home-modal h1 {
-    background: none;
-    margin-left: 2%;
-    font-family: Tabular-Regular;
-    font-size: 28px;
-}
-
-.home-modal p {
-    background: none;
-    margin-left: 4%;
-    width: 94%;
-    font-family: Alpino-Regular;
-    font-size: 20px;
-}
-
-.home-modal .modal-header {
-    border-bottom: 2px solid grey;
-    background-color: #253137;
-}
-
 .home-modal .introduction, .education, .language {
     background: none;
+}
+
+/* --About Me Modal Styling-- */
+.about-modal {
+    border: 2px solid grey;
+    border-radius: 20px;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    left: var(--aboutX);
+    top: var(--aboutY);
+    overflow: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    background-color: hsl(201, 20%, 25%);
+    z-index: 20;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.8);
+    
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0s linear 0.3s;
+}
+
+.about-modal.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scale(1);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0s linear 0s;
+}
+
+.about-modal .modal-header {
+    background: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: #253137;
+    user-select: none;
+}
+
+#closeAboutMe {
+    position: absolute;
+    top: 6%;
+    left: 96%;
+    cursor: pointer;
+}
+
+.about-modal .hobbies {
+    background: none;
+}
+
+.about-modal .hobbies .hobbies-lists {
+    background: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -16px;
 }
 
 

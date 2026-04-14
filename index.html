@@ -39,10 +39,10 @@
 
             <div class="polygons polygon1"></div>
 
-            <div class="nav-bar">
-                <button class="about-me" type="button" tabindex="1">About me</button>
-                <button class="projects" type="button" tabindex="2">Projects</button>
-                <button class="contact" type="button" tabindex="3">Contact</button>
+            <div id="navBar" class="nav-bar">
+                <button id="aboutMeBtn" type="button" tabindex="1">About me</button>
+                <button id="projectsBtn" type="button" tabindex="2">Projects</button>
+                <button id="contactBtn" type="button" tabindex="3">Contact</button>
             </div>
         </section>
     </header>
@@ -72,11 +72,36 @@
                     </p>
                 </div>
             </div>
+
+            <div id="aboutModal" class="about-modal">
+                <div id="aboutHeader" class="modal-header">
+                    <h1>About me</h1>
+                    <span id="closeAboutMe">&times</span>
+                </div>
+                <div class="hobbies">
+                    <h1>Hobbies</h1>
+                    <p>Some of my hobbies are:</p>
+                    <div class="hobbies-lists">
+                        <ul>
+                            <li>Cooking different dishes</li>
+                            <li>Listening to all sorts of music</li>
+                            <li>Learning languages and about them</li>
+                        </ul>
+                        <ul>
+                            <li>Playing video games</li>
+                            <li>Balisong flipping</li>
+                            <li>Star Wars</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         © 2026 <span>Marc Balerion</span>
     </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
