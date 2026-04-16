@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <title>Marc's Website</title>
-    <meta name="author" content="Marc Baleiron">
-    <meta name="description" content="Aplicación web para localizar cargadores de coche">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marc Baleiron" />
+    <meta
+        name="description"
+        content="Personal Website to talk a little about myself"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/styles.css" />
 </head>
 <body>
@@ -13,11 +16,10 @@
         <section class="header">
             <div class="waves wave1"></div>
 
-            <div class="language-slider" style="
-                --width: 120px;
-                --height: 50px;
-                --quantity: 5;
-            ">
+            <div
+                class="language-slider"
+                style="--width: 120px; --height: 50px; --quantity: 5"
+            >
                 <div class="list">
                     <div class="item" style="--position: 1">
                         <p>Hello!</p>
@@ -40,9 +42,15 @@
             <div class="polygons polygon1"></div>
 
             <div id="navBar" class="nav-bar">
-                <button id="aboutMeBtn" type="button" tabindex="1">About me</button>
-                <button id="projectsBtn" type="button" tabindex="2">Projects</button>
-                <button id="contactBtn" type="button" tabindex="3">Contact</button>
+                <button id="aboutMeBtn" type="button" tabindex="1">
+                    About me
+                </button>
+                <button id="projectsBtn" type="button" tabindex="2">
+                    Projects
+                </button>
+                <button id="contactBtn" type="button" tabindex="3">
+                    Contact
+                </button>
             </div>
         </section>
     </header>
@@ -56,19 +64,24 @@
                 <div class="introduction">
                     <h1>Hello, I'm Marc!</h1>
                     <p>
-                        I like creating things and learning about anything interesting.
-                        I'm interested in computacional linguistics and web development.
+                        I like creating things and learning about anything
+                        interesting. I'm interested in computacional
+                        linguistics and web development.
                     </p>
                 </div>
                 <div class="education">
                     <h1>Education</h1>
-                    <p>Currently studying Computer Science at Universidad Alfonso X el Sabio (UAX).</p>
+                    <p>
+                        Currently studying Computer Science at Universidad
+                        Alfonso X el Sabio (UAX).
+                    </p>
                 </div>
                 <div class="language">
                     <h1>Language Proficiency</h1>
                     <p>
-                        I'm native at Spanish and Portuguese, and can speak English with no problem.
-                        I'm also studying more languages such as Japanese and French.
+                        I'm native at Spanish and Portuguese, and can speak
+                        English with no problem. I'm also studying more
+                        languages such as Japanese and French.
                     </p>
                 </div>
             </div>
@@ -95,12 +108,48 @@
                     </div>
                 </div>
             </div>
+
+            <div id="projectsModal" class="projects-modal">
+                <div id="projectsHeader" class="modal-header">
+                    <h1>My Projects</h1>
+                    <span id="closeProjects">&times</span>
+                </div>
+                <div class="finished-projects">
+                    <h1>Finished Projects</h1>
+                    <div class="finished-list">
+                        <ul>
+                            <li>Minesweeper: Little clone made with Python</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="unfinished-projects">
+                    <h1>Unfinished Projects</h1>
+                    <div class="unfinished-list">
+                        <ul>
+                            <li>Zeteis: App to get info about movies and shows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contactModal" class="contact-modal">
+                <div id="contactHeader" class="modal-header">
+                    <h1>Contact Me</h1>
+                    <span id="closeContact">&times</span>
+                </div>
+                <div class="contacts">
+                    <h1>How to Contact Me</h1>
+                    <div class="contacts-list">
+                        <ul>
+                            <li>Email: marcbaleiron@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        © 2026 <span>Marc Balerion</span>
-    </footer>
+    <footer>© 2026 <span>Marc Balerion</span></footer>
 
     <script src="main.js"></script>
 </body>
