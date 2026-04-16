@@ -160,7 +160,7 @@ body {
     background: none;
     margin-left: 2%;
     font-family: Tabular-Regular;
-    font-size: 28px;
+    font-size: clamp(18px, 3vw, 28px);
 }
 
 .modals span {
@@ -172,7 +172,7 @@ body {
     margin-left: 4%;
     width: 94%;
     font-family: Alpino-Regular;
-    font-size: 20px;
+    font-size: clamp(14px, 2vw, 20px);
 }
 
 .modals ul {
@@ -184,15 +184,16 @@ body {
     margin-left: 4%;
     width: 94%;
     font-family: Alpino-Regular;
-    font-size: 20px;
+    font-size: clamp(14px, 2vw, 20px);
 }
 
 /* --Home Modal Styling-- */
 .home-modal {
     border: 2px solid grey;
     border-radius: 20px;
-    width: 800px;
-    height: 500px;
+    width: min(800px, 90vw);
+    height: auto;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -213,6 +214,35 @@ body {
 .education,
 .language {
     background: none;
+}
+
+.about-modal,
+.projects-modal,
+.contact-modal {
+    width: min(800px, 90vw);
+    height: auto;
+    min-height: 300px;
+}
+
+#closeAboutMe,
+#closeProjects,
+#closeContact {
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    background: none;
+    width: auto;
+}
+
+.modal-header h1 {
+    width: auto;
+    margin: 0;
+    padding: 12px 0 12px 16px;
 }
 
 /* --About Me Modal Styling-- */
@@ -263,13 +293,6 @@ body {
     justify-content: space-between;
     background-color: #253137;
     user-select: none;
-}
-
-#closeAboutMe {
-    position: absolute;
-    top: 6%;
-    left: 96%;
-    cursor: pointer;
 }
 
 .about-modal .hobbies {
@@ -331,13 +354,6 @@ body {
     justify-content: space-between;
     background-color: #253137;
     user-select: none;
-}
-
-#closeProjects {
-    position: absolute;
-    top: 6%;
-    left: 96%;
-    cursor: pointer;
 }
 
 .projects-modal .finished-projects,
@@ -409,13 +425,6 @@ body {
     user-select: none;
 }
 
-#closeContact {
-    position: absolute;
-    top: 6%;
-    left: 96%;
-    cursor: pointer;
-}
-
 .contact-modal .contacts {
     background: none;
 }
@@ -445,4 +454,27 @@ footer {
 footer span {
     font-family: Neco-Regular;
     background: none;
+}
+
+
+/* -----Responsiveness----- */
+@media (max-width: 600px) {
+    .home-modal {
+        top: 20%;
+        border-radius: 12px;
+    }
+
+    .nav-bar {
+        top: 10%;
+        justify-content: center;
+    }
+
+    .about-modal,
+    .projects-modal,
+    .contact-modal {
+        /* Center modals instead of random placement on mobile */
+        left: 5% !important;
+        top: 10% !important;
+        width: 90vw;
+    }
 }

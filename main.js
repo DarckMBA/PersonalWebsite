@@ -28,13 +28,16 @@ aboutMeBtn.addEventListener("click", () => {
     if (!isOpenAboutMe) {
         isOpenAboutMe = true;
 
-        const maxX = window.innerWidth - 820;
-        const minX = 100;
-        const randomX = Math.random() * (maxX - minX) + minX;
+        const modalWidth = aboutModal.offsetWidth;
+        const modalHeight = aboutModal.offsetHeight;
 
-        const maxY = window.innerHeight - 520;
+        const maxX = window.innerWidth - modalWidth - 20;
+        const minX = 10;
+        const randomX =Math.max(minX, Math.random() * (maxX - minX) + minX);
+
+        const maxY = window.innerHeight - modalHeight - 20;
         const minY = 50;
-        const randomY = Math.random() * (maxY - minY) + minY;
+        const randomY = Math.max(minY, Math.random() * (maxY - minY) + minY);
 
         aboutModal.style.setProperty("--aboutX", `${randomX}px`);
         aboutModal.style.setProperty("--aboutY", `${randomY}px`);
@@ -98,13 +101,16 @@ projectsBtn.addEventListener("click", () => {
     if (!isOpenProjects) {
         isOpenProjects = true;
 
-        const maxX = window.innerWidth - 820;
-        const minX = 100;
-        const randomX = Math.random() * (maxX - minX) + minX;
+        const modalWidth = projectsModal.offsetWidth;
+        const modalHeight = projectsModal.offsetHeight;
 
-        const maxY = window.innerHeight - 520;
+        const maxX = window.innerWidth - modalWidth - 20;
+        const minX = 10;
+        const randomX =Math.max(minX, Math.random() * (maxX - minX) + minX);
+
+        const maxY = window.innerHeight - modalHeight - 20;
         const minY = 50;
-        const randomY = Math.random() * (maxY - minY) + minY;
+        const randomY = Math.max(minY, Math.random() * (maxY - minY) + minY);
 
         projectsModal.style.setProperty("--projectsX", `${randomX}px`);
         projectsModal.style.setProperty("--projectsY", `${randomY}px`);
@@ -168,13 +174,16 @@ contactBtn.addEventListener("click", () => {
     if (!isOpenContact) {
         isOpenContact = true;
 
-        const maxX = window.innerWidth - 820;
-        const minX = 100;
-        const randomX = Math.random() * (maxX - minX) + minX;
+        const modalWidth = contactModal.offsetWidth;
+        const modalHeight = contactModal.offsetHeight;
 
-        const maxY = window.innerHeight - 520;
+        const maxX = window.innerWidth - modalWidth - 20;
+        const minX = 10;
+        const randomX =Math.max(minX, Math.random() * (maxX - minX) + minX);
+
+        const maxY = window.innerHeight - modalHeight - 20;
         const minY = 50;
-        const randomY = Math.random() * (maxY - minY) + minY;
+        const randomY = Math.max(minY, Math.random() * (maxY - minY) + minY);
 
         contactModal.style.setProperty("--contactX", `${randomX}px`);
         contactModal.style.setProperty("--contactY", `${randomY}px`);
