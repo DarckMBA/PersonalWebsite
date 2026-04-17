@@ -84,6 +84,20 @@ body {
     }
 }
 
+.language-slider:hover .item {
+    animation-play-state: paused!important;
+    cursor: pointer;
+}
+
+.language-slider:hover .item:not(:hover) p {
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.language-slider .item p {
+    transition: opacity 0.3s ease;
+}
+
 /* --Polygons Styling-- */
 .polygons {
     aspect-ratio: 900/300;
@@ -105,7 +119,6 @@ body {
 
 /* --Nav Bar Styling-- */
 .nav-bar {
-    border: 2px solid white;
     border-radius: 30px;
     width: 360px;
     height: 55px;
@@ -121,8 +134,10 @@ body {
     /* Glassmorphism */
     color: #fff;
     background-color: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    
+    /* Border */
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-bar button {
@@ -142,11 +157,11 @@ body {
 }
 
 .nav-bar button:hover {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .nav-bar button.highlighted {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 
@@ -469,10 +484,10 @@ footer span {
         justify-content: center;
     }
 
+    /* Modals centered on Mobile */
     .about-modal,
     .projects-modal,
     .contact-modal {
-        /* Center modals instead of random placement on mobile */
         left: 5% !important;
         top: 10% !important;
         width: 90vw;
